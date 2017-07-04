@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq tab选项卡插件封装</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="./jquery.tab.js"></script>
+    <style>
+        .tab-component .tab-hd:after{content:'';display:block;clear:both;visibility:hidden;}
+        .tab-component .tab-btn{width:51px;cursor:pointer;text-align:center;float:left;}
+        .tab-component .active{background:#ff6600;color:#fff;}
+        .tab-component .tab-content{border:1px solid #ff6600; width:151px;height:100px;}
+    </style>
+</head>
+<body>
+    <div class="tab-component">
+        <div class="tab-hd">
+            <span class="tab-btn">按钮</span>
+            <span class="tab-btn">按钮</span>
+            <span class="tab-btn">按钮</span>
+        </div>
+        <div class="tab-bd">
+            <div class="tab-content">1</div>
+            <div class="tab-content">2</div>
+            <div class="tab-content">3</div>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script>
+        $('.tab-component .tab-btn').tabChange({
+            event : 'click'
+        });
+    </script>
+</body>
+</html>
