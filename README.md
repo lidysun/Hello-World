@@ -1,3 +1,6 @@
-# Hello-World
-test
-I am sungang, a web developer!
+# jQuery tabChange plugin
+
+# How to use:
+$('.tab-component .tab-btn').tabChange({
+    event : 'click'
+});
