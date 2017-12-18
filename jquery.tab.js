@@ -1,4 +1,4 @@
-(function($) {
+;(function($,window,undefined) {
     $.fn.tabChange = function(opt) {
         //默认配置
         var _default = {
@@ -8,7 +8,7 @@
             event        : 'mouseover'
         };
         //自定义配置覆盖默认配置
-        opt = $.extend(_default,opt);
+        opt = $.extend({},_default,opt);
         //初始化显示隐藏
         showOne(0);
         //绑定事件
@@ -22,5 +22,5 @@
             $('.' + opt.contentClass).eq(index).show().siblings().hide();
         }
     }
-})(jQuery)
+})(jQuery,window)
 
